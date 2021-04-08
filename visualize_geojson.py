@@ -6,10 +6,7 @@ s2tiles = geopandas.read_file("s2_grid.json")
 
 with open("HLS.land.tiles.txt","r") as f:
     hls_tilelist = [x.strip("\n") for x in f.readlines()]
-
-print(hls_tilelist[0])
 hlstiles = s2tiles[s2tiles['identifier'].isin(hls_tilelist)]
-print(hlstiles)
 
 fig = plt.figure(figsize=[10,6],dpi=300,facecolor=None)
 ax = fig.add_axes([0.01,0.01,0.98,0.98],projection = ccrs.Robinson())
