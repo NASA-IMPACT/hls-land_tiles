@@ -8,7 +8,7 @@ How was the list of HLS tiles over land excluding Antarctica derived.
    1) Shapefiles are not included in the github repo and should be downloaded from the link above.
    2) The full resolution GSHHG level 1 shapefile is used (GSHHS_shp/f/GSHHS_f_L1.shp)
 	a) Level 1 shapefile includes the land/ocean boundary - inland water bodies are not masked.
-	b) Lower resolution shapefiles are available. If users want to increase processing time with a lower resolution shapefile, update the file path in the params.json file
+	b) Lower resolution shapefiles are available. If users want to reduce processing time with a lower resolution shapefile, update the file path in the params.json file
 	c) A 0.01 degree buffer is added to the land boundary prior to finding the S2 grid intersection.
 
 2. The KML of the MGRS grid is provided via Copernicus and can be converted as stored as a geojson using create_S2_geojson.py:
